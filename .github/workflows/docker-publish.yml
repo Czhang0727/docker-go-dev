@@ -26,7 +26,7 @@ jobs:
       matrix:
         include:
           - arch: aarch64
-            distro: bullseye  
+            distro: archarm_latest  
 
     steps:
       - uses: actions/checkout@v2
