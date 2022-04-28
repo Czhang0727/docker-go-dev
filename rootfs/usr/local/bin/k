@@ -50,7 +50,7 @@ TARGET=$KX_PATH/kubectl-$TARGET_VERSION
 
 if [ ! -f $TARGET ]; then
   cd "$KX_PATH"
-  curl -sLO "https://storage.googleapis.com/kubernetes-release/release/$TARGET_VERSION/bin/$OS/amd64/kubectl"
+  curl -sLO "https://storage.googleapis.com/kubernetes-release/release/$TARGET_VERSION/bin/$OS/arm64/kubectl"
   mv $KX_PATH/kubectl $TARGET
   chmod +x $TARGET
 fi
