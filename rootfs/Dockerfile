@@ -85,8 +85,9 @@ RUN \
   && curl -L https://github.com/coreos/etcd/releases/download/${ETCDCTL_VERSION}/etcd-${ETCDCTL_VERSION}-linux-arm64.tar.gz -o /tmp/etcd-${ETCDCTL_VERSION}.tar.gz \
   && tar -C /tmp -xvzf /tmp/etcd-${ETCDCTL_VERSION}.tar.gz --strip-components=1 etcd-${ETCDCTL_VERSION}-linux-arm64/etcdctl \
   && mv /tmp/etcdctl /usr/local/bin/etcdctl \
-  && rm /tmp/etcd-${ETCDCTL_VERSION}.tar.gz \
-  && go get -u -v \
+  && rm /tmp/etcd-${ETCDCTL_VERSION}.tar.gz 
+
+RUN go get -u -v \
   github.com/AlekSi/gocov-xml \
   github.com/axw/gocov/gocov \
   github.com/go-delve/delve/cmd/dlv \

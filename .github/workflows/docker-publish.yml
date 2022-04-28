@@ -22,6 +22,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        include:
+          - arch: aarch64
+            distro: bullseye  
+
     steps:
       - uses: actions/checkout@v2
 
